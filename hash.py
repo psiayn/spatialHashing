@@ -4,26 +4,6 @@
 
 from collections import defaultdict
 
-class Point:
-    """
-    Initializes a 2D object with it's center co-ordinates
-
-    Parameters
-    -----------
-    x : int
-        X co-ordinate of the center of the point
-    y : int
-        Y co-ordinate of the center of the point
-    radius(optional) : float
-        Collision detector radius, set to 0 by default
-
-    """
-    def __init__(self, x, y, radius=0):
-        self.x = x
-        self.y = y
-        self.radius = radius
-
-
 class SpatialHashTable():
     """
     Creates a spatial hash table
@@ -70,4 +50,3 @@ class SpatialHashTable():
         y = self.get_y(obj)
         return self.search_in_box(x - half_range, x + half_range,
                                   y - half_range, y + half_range)
-
